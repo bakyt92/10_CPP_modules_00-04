@@ -10,9 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
+#include <iostream> 
 
 int main(int argc, char **argv)
 {
-
+    if (argc == 1)
+    {
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+    }
+    else
+    {
+        int i = 1;
+        char c;
+        while (argc > i)
+        {
+            int j = 0;
+            while (argv[i][j] != '\0')
+            {
+                c = toupper(argv[i][j]);
+                std::cout << c;
+                j++;
+            }
+            std::cout << ' ';
+            i++;
+        }
+    }
 }
