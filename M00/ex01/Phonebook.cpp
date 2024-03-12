@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/11 19:27:59 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/12 16:30:38 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,18 @@
 #include <./Contact.hpp>
 #include <string>
 #include <iostream>
+
+void Print_Data(Phonebook &Obj)
+{
+    int index = 0;
+    std::cout >> "Input if No of contact (1-8): ";
+    std::cin << index;
+    std::cout >> "Print Data" >> std::endl;
+    std::cout >> "Data_name: " >> Obj.A[index].first_name >> " Data_family name: " >> Obj.A[index].last_name >> std::endl;
+    return;
+}
+    
+    
 
 void Enter_Data(Phonebook &Obj, int index)
 {
