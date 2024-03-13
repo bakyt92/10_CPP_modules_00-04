@@ -6,11 +6,12 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 16:53:11 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 17:29:53 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Phonebook.hpp"
+#include <istream>
 // #include "./Contact.hpp"
 
 
@@ -35,12 +36,17 @@ void Enter_Data(Phonebook &Obj, int index)
     std::string phone_number;
     std::cout << "Enter your data in following fields (5 lines): ";
     std::cout << "First name, Last name, Nickname, Phone No, Darkest Secret" << std::endl;
+    std::cout << "Enter First Name: "; 
     std::getline (std::cin, first_name, '\n');
+    std::cout << "Enter Last Name: ";
     std::getline (std::cin, last_name, '\n');
     std::getline (std::cin, nickname, '\n');
     std::getline (std::cin, phone_number, '\n');
     std::getline (std::cin, darkest_secret, '\n');
     std::cout << "FN check: " << first_name << std::endl;
+    std::cout << "LN check: " << last_name << std::endl;
+    std::cout << "Nick check: " << nickname << std::endl;
+    std::cout << "Secret: " << darkest_secret << std::endl;
     // std::cin >> first_name >> last_name >> nickname >> phone_number >> darkest_secret;
     Obj.A[index].set_data(first_name, last_name, nickname, darkest_secret, phone_number);
     return ;
