@@ -6,14 +6,13 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/12 17:16:40 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 14:40:56 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Phonebook.hpp"
 // #include "./Contact.hpp"
-#include <string>
-#include <iostream>
+
 
 void Print_Data(Phonebook &Obj)
 {
@@ -67,7 +66,7 @@ int main (void)
         {
             std::cout << "Wrong command. Enter new command" << std::endl;
         }
-        if (index == 7)
+        if (index == 3)
             index = 0;
     }
     return (0);

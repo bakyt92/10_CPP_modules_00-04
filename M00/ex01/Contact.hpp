@@ -6,12 +6,14 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:27 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/12 17:02:11 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 14:40:31 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "./Phonebook.hpp"
-#include <string>
+
+#ifndef H_CONTACT
+#define H_CONTACT
 
 class Contact
 {
@@ -60,3 +62,7 @@ class Contact
             return ;
         }
 };
+
+#endif
+
+// include guards https://en.wikipedia.org/wiki/Include_guard 

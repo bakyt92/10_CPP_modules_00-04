@@ -6,12 +6,15 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/12 17:18:14 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 14:36:10 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef H_PHONEBOOK
+#define H_PHONEBOOK
+
 #include <string>
-// #include "./Phonebook.hpp"
+#include <iostream>
 #include "./Contact.hpp"
 
 class Phonebook
@@ -28,3 +31,8 @@ class Phonebook
         //     return ;
         // }
 };
+
+#endif
+
+// include guard optimisation 
+// https://web.archive.org/web/20100819052043/http://www.bobarcher.org/software/include/index.html
