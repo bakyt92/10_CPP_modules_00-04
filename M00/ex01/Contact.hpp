@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:27 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 14:40:31 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:33:22 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Contact
         std::string phone_number;
 
     public:
+        Contact();
+        ~Contact();
         const std::string get_first_name(void)
             {
                 return first_name;

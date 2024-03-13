@@ -6,7 +6,7 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/06 20:31:09 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/07 21:07:23 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/13 19:15:10 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ clean	:
 	@rm -f $(OBJ)
 
 fclean	:	clean
-	@$(RM) $(NAME)
+	@rm -f $(OBJ)
 
 re	:	fclean all
 

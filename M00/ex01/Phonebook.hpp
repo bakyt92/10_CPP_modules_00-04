@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 14:36:10 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:35:32 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include "./Contact.hpp"
 
 class Phonebook
 {
     public:
+        Phonebook();
+        ~Phonebook();
         Contact A[8];
         class Contact get_contact(int index)
         {

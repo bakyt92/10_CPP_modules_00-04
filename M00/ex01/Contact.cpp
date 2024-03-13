@@ -6,7 +6,17 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:33 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/07 21:54:34 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:34:36 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Phonebook.hpp"
+
+Contact::Contact()
+{
+}
+
+
+Contact::~Contact()
+{
+}
