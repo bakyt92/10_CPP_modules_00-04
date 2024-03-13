@@ -6,13 +6,12 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 21:35:52 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:39:32 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Phonebook.hpp"
-#include <istream>
-// #include "./Contact.hpp"
+
 
 Phonebook::Phonebook()
 {
@@ -22,6 +21,7 @@ Phonebook::Phonebook()
 Phonebook::~Phonebook()
 {
 }
+
 
 void StringConverter(std::string &fn, std::string &ln, std::string &nick)
 {
