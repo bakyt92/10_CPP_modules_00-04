@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 14:40:56 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 16:32:52 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ void Enter_Data(Phonebook &Obj, int index)
     std::string phone_number;
     std::cout << "Enter your data in following fields (5 lines): ";
     std::cout << "First name, Last name, Nickname, Phone No, Darkest Secret" << std::endl;
-    std::cin >> first_name >> last_name >> nickname >> phone_number >> darkest_secret;
+    std::getline (std::cin, first_name);
+    std::getline (std::cin, last_name);
+    std::getline (std::cin, nickname);
+    std::getline (std::cin, nickname);
+    // std::cin >> first_name >> last_name >> nickname >> phone_number >> darkest_secret;
     Obj.A[index].set_data(first_name, last_name, nickname, darkest_secret, phone_number);
     return ;
 }
