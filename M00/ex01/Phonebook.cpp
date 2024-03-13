@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 21:39:32 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:59:00 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,6 @@ void Enter_Data(Phonebook &Obj, int index)
     std::getline (std::cin, phone_number, '\n');
     std::cout << "Darkest Secret: ";
     std::getline (std::cin, darkest_secret, '\n');
-    std::cout << "FN check: " << first_name << std::endl;
-    std::cout << "LN check: " << last_name << std::endl;
-    std::cout << "Nick check: " << nickname << std::endl;
-    std::cout << "Secret: " << darkest_secret << std::endl;
-    // std::cin >> first_name >> last_name >> nickname >> phone_number >> darkest_secret;
     Obj.A[index].set_data(first_name, last_name, nickname, darkest_secret, phone_number);
     return ;
 }
