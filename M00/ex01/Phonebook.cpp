@@ -6,17 +6,17 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 21:59:00 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 22:41:57 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Phonebook.hpp"
 
 
-Phonebook::Phonebook()
+Phonebook::Phonebook(int x)
 {
+    size_list = x;
 }
-
 
 Phonebook::~Phonebook()
 {
@@ -47,9 +47,10 @@ void Print_Data(Phonebook &Obj, int i)
 {
     std::cout << "List of contacts: " << std::endl;
     int index = 0;
-    i++;
     std::string fn, ln, nick;
-    while (index < 8)
+    if (Obj.get_size_list() == 1)
+        i = 8;
+    while (index < i)
     {
         std::cout << index << std::setfill ('.') << std::setw(10) << " | ";
         fn = Obj.A[index].get_first_name();
@@ -61,6 +62,25 @@ void Print_Data(Phonebook &Obj, int i)
         std::cout << std::setw(10) << std::setfill ('.') << nick << std::setfill ('.') << " | ";
         std::cout << std::endl;
         index++;
+    }
+    while (1)
+    {
+        std::cout << "To see detailed info pour contacts, enter index No: ";
+        int x;
+        std::cin >> x;
+        if (x <= i)
+        {
+            std::cout << Obj.A[x].get_first_name() << std::endl;
+            std::cout << Obj.A[x].get_last_name() << std::endl;
+            std::cout << Obj.A[x].get_nickname() << std::endl;
+            std::cout << Obj.A[x].get_darkest_secret() << std::endl;
+            std::cout << Obj.A[x].get_phone_number() << std::endl;
+            break;
+        }
+        else
+        {
+            std::cout << "This contact does not exist. Please enter Index of contact one more time" << std::endl;
+        }
     }
     return;
 }
@@ -93,7 +113,7 @@ void Enter_Data(Phonebook &Obj, int index)
 int main (void)
 {
     std::string input;
-    Phonebook Obj;
+    Phonebook Obj(0);
     int index = 0;
     while (1)
     {
@@ -117,7 +137,10 @@ int main (void)
             std::cout << "Wrong command. Enter new command" << std::endl;
         }
         if (index == 8)
-            index = 0;
+            {
+                index = 0;
+                Obj.set_size_list(1);
+            }
     }
     return (0);
 }

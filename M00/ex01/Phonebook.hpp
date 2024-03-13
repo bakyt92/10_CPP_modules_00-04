@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 21:35:32 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/13 22:36:50 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,26 @@
 
 class Phonebook
 {
+    private: 
+        int size_list;
     public:
-        Phonebook();
+        Phonebook(int x);
         ~Phonebook();
         Contact A[8];
         class Contact get_contact(int index)
         {
             return A[index];
         }
+        int get_size_list()
+        {
+            return (size_list);
+        }
+        void set_size_list(int x)
+        {
+            size_list = x;
+            return;
+        }
+        
         // void set_contact(int index)
         // {
         //     A[index].set_data(std::string fn, std::string ln, std::string nick, std::string secret, std::string num);
