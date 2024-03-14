@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:45:34 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 17:57:51 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 18:15:20 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Account::Account(int initial_deposit)
     _nbAccounts++;
     _accountIndex = _nbAccounts - 1;
     _displayTimestamp();
-    std::cout << "Index:" << _accountIndex << ";";
+    std::cout << "index:" << _accountIndex << ";";
     _amount = 0;
     _amount += initial_deposit;
     _totalAmount += initial_deposit;
@@ -37,7 +37,7 @@ Account::Account(int initial_deposit)
 Account::~Account()
 {
     _displayTimestamp();
-    std::cout << "Index:" << _accountIndex << ";";
+    std::cout << "index:" << _accountIndex << ";";
     std::cout << "amount:" << checkAmount() << ";";
     std::cout << "closed";
     std::cout << std::endl;
