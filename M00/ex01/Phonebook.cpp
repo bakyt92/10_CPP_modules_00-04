@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 20:49:37 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 21:27:27 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,15 @@ void Phonebook::print_all_data(int index)
     std::cout << std::setw(10) << std::setfill ('.') << ln << std::setfill ('.') << " | ";
     std::cout << std::setw(10) << std::setfill ('.') << nick << std::setfill ('.') << " | ";
     std::cout << std::endl;
+    return ;
+}
+
+const void Phonebook::print_one_cont(int index)
+{
+    std::cout << A[index].get_first_name() << std::endl;
+    std::cout << A[index].get_last_name() << std::endl;
+    std::cout << A[index].get_nickname() << std::endl;
+    std::cout << A[index].get_darkest_secret() << std::endl;
+    std::cout << A[index].get_phone_number() << std::endl;
+    return ;
 }

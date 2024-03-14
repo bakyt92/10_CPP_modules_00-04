@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 20:50:21 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 20:54:39 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 21:16:12 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,7 @@ void Print_Data(Phonebook &Obj, int i)
         std::cin >> x;
         if (x < i)
         {
-            std::cout << Obj.A[x].get_first_name() << std::endl;
-            std::cout << Obj.A[x].get_last_name() << std::endl;
-            std::cout << Obj.A[x].get_nickname() << std::endl;
-            std::cout << Obj.A[x].get_darkest_secret() << std::endl;
-            std::cout << Obj.A[x].get_phone_number() << std::endl;
+            Obj.print_one_cont(x);
             return;
         }
         else
