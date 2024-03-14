@@ -1,11 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/14 16:45:34 by ufitzhug          #+#    #+#             */
+/*   Updated: 2024/03/14 17:57:51 by ufitzhug         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iomanip>
 #include <iostream>
 #include <ctime>
 #include "Account.hpp"
 
+int	Account::_nbAccounts = 0;
+int	Account::_totalAmount = 0;
+int	Account::_totalNbDeposits = 0;
+int	Account::_totalNbWithdrawals = 0;
+
 Account::Account(int initial_deposit)
 {
     _nbAccounts++;
+    _accountIndex = _nbAccounts - 1;
     _displayTimestamp();
     std::cout << "Index:" << _accountIndex << ";";
     _amount = 0;
@@ -47,6 +65,7 @@ int Account::getNbWithdrawals()
 
 void Account::displayAccountsInfos(void)
 {
+    _displayTimestamp();
     std::cout << "accounts:" << getNbAccounts() << ";";
     std::cout << "total:" << getTotalAmount() << ";";
     std::cout << "deposits:" << getNbDeposits() << ";";
@@ -57,8 +76,13 @@ void Account::displayAccountsInfos(void)
 void Account::_displayTimestamp(void)
 {
     std::time_t result = std::time(0);
-    std::cout << std::asctime(std::localtime(&result))
-              << result << " seconds since the Epoch\n";
+    tm *tm_local = localtime(&result);
+    std::cout << "[" << tm_local->tm_year + 1900;
+    std::cout << std::setfill('0') << std::setw(2) << tm_local->tm_mon + 1;
+    std::cout << std::setw(2) << tm_local->tm_mday << "_";
+    std::cout << std::setw(2) << tm_local->tm_hour; 
+    std::cout << std::setw(2) << tm_local->tm_min;
+    std::cout << std::setw(2) << tm_local->tm_sec << "] ";
     return ;
 }
 
