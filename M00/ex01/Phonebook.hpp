@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 18:56:01 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 20:51:39 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,13 @@ class Phonebook
         {
             flag = x;
         }
-        
-        // void set_contact(int index)
-        // {
-        //     A[index].set_data(std::string fn, std::string ln, std::string nick, std::string secret, std::string num);
-        //     return ;
-        // }
+        std::string read_input(void);
+        bool welcome(void);
+        void set_data(int index);
+        void print_all_data(int index);
 };
 
+void StringConverter(std::string &fn, std::string &ln, std::string &nick);
 
 
 #endif

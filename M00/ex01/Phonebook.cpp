@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 19:18:31 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 20:49:37 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,70 +23,30 @@ Phonebook::~Phonebook()
 {
 }
 
-void StringConverter(std::string &fn, std::string &ln, std::string &nick)
+
+bool Phonebook::welcome()
 {
-    if (fn.length() > 9)
-    {
-        fn = fn.substr(0, 9);
-        fn.append(".");
-    }
-    if (ln.length() > 9)
-    {
-        ln = ln.substr(0, 9);
-        ln.append(".");
-    }
-    if (nick.length() > 9)
-    {
-        nick = nick.substr(0, 9);
-        nick.append(".");
-    }
-    return ;
+    std::cout << "Enter command (ADD / SEARCH / EXIT)" << std::endl;
+    return 0;
 }
 
-void Print_Data(Phonebook &Obj, int i)
+std::string Phonebook::read_input(void)
 {
-    std::cout << "List of contacts: " << std::endl;
-    int index = 0;
-    std::string fn, ln, nick;
-    if (Obj.get_flag() == 1)
-        i = 8;
-    while (index < i)
-    {
-        std::cout << index << std::setfill ('.') << std::setw(10) << " | ";
-        fn = Obj.A[index].get_first_name();
-        ln = Obj.A[index].get_last_name();
-        nick = Obj.A[index].get_nickname();
-        StringConverter(fn, ln, nick);
-        std::cout << std::setw(10) << std::setfill ('.') << fn << std::setfill ('.') << " | ";
-        std::cout << std::setw(10) << std::setfill ('.') << ln << std::setfill ('.') << " | ";
-        std::cout << std::setw(10) << std::setfill ('.') << nick << std::setfill ('.') << " | ";
-        std::cout << std::endl;
-        index++;
-    }
-    while (1)
-    {
-        std::cout << "To see detailed info pour contacts, enter index No: ";
-        int x;
-        std::cin >> x;
-        if (x < i)
-        {
-            std::cout << Obj.A[x].get_first_name() << std::endl;
-            std::cout << Obj.A[x].get_last_name() << std::endl;
-            std::cout << Obj.A[x].get_nickname() << std::endl;
-            std::cout << Obj.A[x].get_darkest_secret() << std::endl;
-            std::cout << Obj.A[x].get_phone_number() << std::endl;
-            return;
-        }
-        else
-        {
-            std::cout << "This contact does not exist. Please enter Index of contact one more time" << std::endl;
-        }
-    }
-    return;
+    std::string input = "";
+    std::cin >> input;
+    if (std::cin.eof())
+        return ("EXIT");
+    else if (input == "EXIT")
+        return "EXIT";
+    else if (input == "ADD")
+        return "ADD";
+    else if (input == "SEARCH")
+        return "SEARCH";
+    else
+        return "Wrong line. Enter command again \n";
 }
 
-  
-void Enter_Data(Phonebook &Obj, int index)
+void Phonebook::set_data(int index)
 {
     std::string first_name;
     std::string last_name;
@@ -97,62 +57,29 @@ void Enter_Data(Phonebook &Obj, int index)
     std::cout << "First name, Last name, Nickname, Phone No, Darkest Secret" << std::endl;
     std::cout << "Enter First Name: "; 
     std::getline (std::cin, first_name, '\n');
-    // std::getline (std::cin, first_name, '\n');
+    std::getline (std::cin, first_name, '\n');
     std::cout << "Enter Last Name: ";
     std::getline (std::cin, last_name, '\n');
     std::cout << "Enter Nickname: ";
     std::getline (std::cin, nickname, '\n');
-    std::cout << "Phone No: ";
+    std::cout << "Enter Phone No: ";
     std::getline (std::cin, phone_number, '\n');
-    std::cout << "Darkest Secret: ";
+    std::cout << "Enter Darkest Secret: ";
     std::getline (std::cin, darkest_secret, '\n');
-    Obj.A[index].set_data(first_name, last_name, nickname, darkest_secret, phone_number);
+    A[index].set_data(first_name, last_name, nickname, darkest_secret, phone_number);
     return ;
 }
 
-int main (void)
+void Phonebook::print_all_data(int index)
 {
-    std::string input;
-    Phonebook Obj(0);
-    int index = 0;
-    
-    while (1)
-    {
-        std::cout << "Enter command (ADD / SEARCH / EXIT)" << std::endl;
-        // std::getline(std::cin, input);
-        if (!std::getline(std::cin, input))
-            break;
-        std::cout << "input1=" << input << std::endl;
-        // std::cin >> input;
-        // if (eof())
-        //     break;
-        // std::cout << "Enter command (ADD / SEARCH / EXIT)" << std::endl;
-        // std::cin >> input;
-        // if (!std::getline(std::cin, input))
-        //     break;
-        if (input == "ADD")
-        {
-            Enter_Data(Obj, index);
-            index++;
-        }
-        else if (input == "SEARCH")
-        {
-            Print_Data(Obj, index);
-        }
-        else if (input == "EXIT")
-        {
-            break;
-        }
-        else
-        {
-            std::cout << "input2=" << input << std::endl;
-            std::cout << "Wrong command. Enter new command" << std::endl;
-        }
-        if (index == 8)
-            {
-                index = 0;
-                Obj.set_flag(1);
-            }
-    }
-    return (0);
+    std::string fn, ln, nick;
+    std::cout << index << std::setfill ('.') << std::setw(10) << " | ";
+    fn = A[index].get_first_name();
+    ln = A[index].get_last_name();
+    nick = A[index].get_nickname();
+    StringConverter(fn, ln, nick);
+    std::cout << std::setw(10) << std::setfill ('.') << fn << std::setfill ('.') << " | ";
+    std::cout << std::setw(10) << std::setfill ('.') << ln << std::setfill ('.') << " | ";
+    std::cout << std::setw(10) << std::setfill ('.') << nick << std::setfill ('.') << " | ";
+    std::cout << std::endl;
 }

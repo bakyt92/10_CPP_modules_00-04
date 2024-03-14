@@ -6,13 +6,13 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/07 14:38:30 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/13 17:13:44 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/14 20:50:49 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Phonebook 
 
-SRC = Phonebook.cpp Contact.cpp
+SRC = Phonebook.cpp Contact.cpp main.cpp
 
 HEADER = Phonebook.hpp Contact.hpp
 
