@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 21:27:22 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 22:40:10 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <limits>
 #include "./Contact.hpp"
 
 class Phonebook
@@ -25,7 +26,7 @@ class Phonebook
         bool flag;
         Contact A[8];
     public:
-        Phonebook(int x);
+        Phonebook();
         ~Phonebook();
         const Contact& get_contact(int index) const
         {
@@ -56,7 +57,9 @@ class Phonebook
         bool welcome(void);
         void set_data(int index);
         void print_all_data(int index);
-        const void print_one_cont(int index);
+        void print_one_cont(int index);
+        bool ft_check(void);
+        void PrintData(int i);
 };
 
 void StringConverter(std::string &fn, std::string &ln, std::string &nick);
