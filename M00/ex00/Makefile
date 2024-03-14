@@ -6,7 +6,7 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/06 20:31:09 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/13 19:15:10 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/14 18:03:28 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean	:
-	@rm -f $(OBJ)
+	@rm -f $(NAME)
 
 fclean	:	clean
-	@rm -f $(OBJ)
+	@rm -f $(NAME)
 
 re	:	fclean all
 

@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 20:31:23 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/07 21:10:23 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 18:05:39 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ int main(int argc, char **argv)
                 std::cout << c;
                 j++;
             }
-            std::cout << ' ';
+            if (i != (argc - 1))
+                std::cout << ' ';
             i++;
         }
         std::cout << '\n';
