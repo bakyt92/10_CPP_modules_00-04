@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 22:41:57 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:18:31 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 Phonebook::Phonebook(int x)
 {
     size_list = x;
+    set_flag(0);
 }
 
 Phonebook::~Phonebook()
 {
 }
-
 
 void StringConverter(std::string &fn, std::string &ln, std::string &nick)
 {
@@ -48,7 +48,7 @@ void Print_Data(Phonebook &Obj, int i)
     std::cout << "List of contacts: " << std::endl;
     int index = 0;
     std::string fn, ln, nick;
-    if (Obj.get_size_list() == 1)
+    if (Obj.get_flag() == 1)
         i = 8;
     while (index < i)
     {
@@ -68,14 +68,14 @@ void Print_Data(Phonebook &Obj, int i)
         std::cout << "To see detailed info pour contacts, enter index No: ";
         int x;
         std::cin >> x;
-        if (x <= i)
+        if (x < i)
         {
             std::cout << Obj.A[x].get_first_name() << std::endl;
             std::cout << Obj.A[x].get_last_name() << std::endl;
             std::cout << Obj.A[x].get_nickname() << std::endl;
             std::cout << Obj.A[x].get_darkest_secret() << std::endl;
             std::cout << Obj.A[x].get_phone_number() << std::endl;
-            break;
+            return;
         }
         else
         {
@@ -97,7 +97,7 @@ void Enter_Data(Phonebook &Obj, int index)
     std::cout << "First name, Last name, Nickname, Phone No, Darkest Secret" << std::endl;
     std::cout << "Enter First Name: "; 
     std::getline (std::cin, first_name, '\n');
-    std::getline (std::cin, first_name, '\n');
+    // std::getline (std::cin, first_name, '\n');
     std::cout << "Enter Last Name: ";
     std::getline (std::cin, last_name, '\n');
     std::cout << "Enter Nickname: ";
@@ -115,10 +115,21 @@ int main (void)
     std::string input;
     Phonebook Obj(0);
     int index = 0;
+    
     while (1)
     {
         std::cout << "Enter command (ADD / SEARCH / EXIT)" << std::endl;
-        std::cin >> input;
+        // std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            break;
+        std::cout << "input1=" << input << std::endl;
+        // std::cin >> input;
+        // if (eof())
+        //     break;
+        // std::cout << "Enter command (ADD / SEARCH / EXIT)" << std::endl;
+        // std::cin >> input;
+        // if (!std::getline(std::cin, input))
+        //     break;
         if (input == "ADD")
         {
             Enter_Data(Obj, index);
@@ -132,14 +143,15 @@ int main (void)
         {
             break;
         }
-        else 
+        else
         {
+            std::cout << "input2=" << input << std::endl;
             std::cout << "Wrong command. Enter new command" << std::endl;
         }
         if (index == 8)
             {
                 index = 0;
-                Obj.set_size_list(1);
+                Obj.set_flag(1);
             }
     }
     return (0);

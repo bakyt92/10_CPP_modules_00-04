@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/13 22:36:50 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/14 18:56:01 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Phonebook
 {
     private: 
         int size_list;
+        bool flag;
     public:
         Phonebook(int x);
         ~Phonebook();
@@ -30,14 +31,26 @@ class Phonebook
         {
             return A[index];
         }
+
         int get_size_list()
         {
             return (size_list);
         }
+
         void set_size_list(int x)
         {
             size_list = x;
             return;
+        }
+        
+        bool get_flag()
+        {
+            return (flag);
+        }
+        
+        void set_flag(bool x)
+        {
+            flag = x;
         }
         
         // void set_contact(int index)
@@ -46,6 +59,8 @@ class Phonebook
         //     return ;
         // }
 };
+
+
 
 #endif
 
