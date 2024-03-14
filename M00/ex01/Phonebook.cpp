@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/15 00:10:58 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/15 00:19:38 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ void Phonebook::PrintData(int i)
         int x;
         std::cin >> x;
         // std::cin.ignore(std::numeric_limits<int>::max(), '\n');
-        if (x <= i && x >= 0 && std::cin.good())
+        if (x < i && x >= 0 && std::cin.good())
         {
             print_one_cont(x);
             return;
