@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/14 22:40:10 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:27:52 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,11 @@ class Phonebook
     public:
         Phonebook();
         ~Phonebook();
-        const Contact& get_contact(int index) const
-        {
-            return A[index];
-        }
-
-        int get_size_list() const
-        {
-            return (size_list);
-        }
-
-        void set_size_list(int x)
-        {
-            size_list = x;
-            return;
-        }
-        
-        bool get_flag() const
-        {
-            return (flag);
-        }
-        
-        void set_flag(bool x)
-        {
-            flag = x;
-        }
+        const Contact& get_contact(int index) const;
+        const int& get_size_list() const;
+        void set_size_list(int x);     
+        const bool& get_flag() const;
+        void set_flag(bool x);
         std::string read_input(void);
         bool welcome(void);
         void set_data(int index);
@@ -63,8 +43,6 @@ class Phonebook
 };
 
 void StringConverter(std::string &fn, std::string &ln, std::string &nick);
-void Print_Data(Phonebook &Obj, int i);
-
 
 #endif
 

@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/15 00:19:38 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:27:48 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,36 @@ Phonebook::~Phonebook()
 {
 }
 
+const Contact& Phonebook::get_contact(int index) const
+{
+    return A[index];
+}
+
+const int& Phonebook::get_size_list() const
+{
+    return (size_list);
+}
+
+void Phonebook::set_size_list(int x)
+{
+    size_list = x;
+    return;
+}
+
+void Phonebook::set_flag(bool x)
+{
+    flag = x;
+}
 
 bool Phonebook::welcome()
 {
-    std::cout << "Enter command (ADD / SEARCH / EXIT)" << "\n";
+    std::cout << "Enter command (ADD / SEARCH / EXIT)" << std::endl;
     return 0;
+}
+
+const bool& Phonebook::get_flag() const
+{
+    return (flag);
 }
 
 std::string Phonebook::read_input(void)
@@ -45,8 +70,11 @@ std::string Phonebook::read_input(void)
     else
     {
         if (std::cin.fail())
+        {
             std::cin.clear();
-        return "Wrong line. Enter command again \n";
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        return "Wrong Input. Please, enter command again \n";
     }
 }
 
@@ -58,7 +86,7 @@ void Phonebook::set_data(int index)
     std::string darkest_secret;
     std::string phone_number;
     std::cout << "Enter your data in following fields (5 lines): ";
-    std::cout << "First name, Last name, Nickname, Phone No, Darkest Secret" << "\n";
+    std::cout << "First name, Last name, Nickname, Phone No, Darkest Secret" << std::endl;
     std::cout << "Enter First Name: "; 
     std::getline (std::cin, first_name, '\n');
     std::getline (std::cin, first_name, '\n');
@@ -92,18 +120,18 @@ void Phonebook::print_all_data(int index)
     std::cout << std::setw(10) << std::setfill ('.') << fn << std::setfill ('.') << " | ";
     std::cout << std::setw(10) << std::setfill ('.') << ln << std::setfill ('.') << " | ";
     std::cout << std::setw(10) << std::setfill ('.') << nick << std::setfill ('.') << " | ";
-    std::cout << "\n";
+    std::cout << std::endl;
     return ;
 }
 
 void Phonebook::print_one_cont(int index)
 {
-    std::cout << "Information per user index" << index << "is printing.." << "\n";
-    std::cout << "First name:" << A[index].get_first_name() << "\n";
-    std::cout << "Last name:"<< A[index].get_last_name() << "\n";
-    std::cout << "Nickname:"<< A[index].get_nickname() << "\n";
-    std::cout << "Phone number:"<< A[index].get_phone_number() << "\n";
-    std::cout << "Secret:"<< A[index].get_darkest_secret() << "\n";
+    std::cout << "Information per user index" << index << "is printing.." << std::endl;
+    std::cout << "First name:" << A[index].get_first_name() << std::endl;
+    std::cout << "Last name:"<< A[index].get_last_name() << std::endl;
+    std::cout << "Nickname:"<< A[index].get_nickname() << std::endl;
+    std::cout << "Phone number:"<< A[index].get_phone_number() << std::endl;
+    std::cout << "Secret:"<< A[index].get_darkest_secret() << std::endl;
     return ;
 }
 
@@ -119,14 +147,14 @@ void Phonebook::PrintData(int i)
 {
     if (ft_check() == 1)
         {
-            std::cout << "List of contacts does not exist" << "\n";
+            std::cout << "List of contacts does not exist" << std::endl;
             return ;
         }
     std::cout << std::setw(10) << std::setfill ('.') << "Index" << " | ";
     std::cout << std::setw(10) << std::setfill ('.') << "First name" << " | ";
     std::cout << std::setw(10) << std::setfill ('.') << "Last name"<< " | ";
     std::cout << std::setw(10) << std::setfill ('.') << "Nickname" << " | ";
-    std::cout << "\n";
+    std::cout << std::endl;
     int index = 0;
     if (get_flag() == 1)
         i = 8;
@@ -149,10 +177,14 @@ void Phonebook::PrintData(int i)
         else
         {
             if (std::cin.fail())
-                std::cin.clear();
-            std::cout << "This contact does not exist." << "\n";
+                {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                }
+            std::cout << "This contact does not exist." << std::endl;
             return;
         }
     }
     return;
 }
+
