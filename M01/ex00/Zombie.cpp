@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 00:28:46 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/15 00:36:20 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/15 18:43:41 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ Zombie::Zombie(std::string name1)
 
 void Zombie::announce(void)
 {
-    std::cout << "BraiiiiiiinnnzzzZ...";
+    std::cout << name << ": BraiiiiiiinnnzzzZ...";
     return ;
+}
+
+Zombie* Zombie::newZombie(std::string name)
+{
+    Zombie *Z = new Zombie(name);
+    return (Z);
 }
