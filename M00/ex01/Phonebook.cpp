@@ -6,12 +6,11 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:38:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/15 15:27:48 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:32:30 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Phonebook.hpp"
-
 
 Phonebook::Phonebook()
 {
@@ -109,6 +108,26 @@ void Phonebook::set_data(int index)
     return ;
 }
 
+void Phonebook::StringConverter(std::string &fn, std::string &ln, std::string &nick)
+{
+    if (fn.length() > 9)
+    {
+        fn = fn.substr(0, 9);
+        fn.append(".");
+    }
+    if (ln.length() > 9)
+    {
+        ln = ln.substr(0, 9);
+        ln.append(".");
+    }
+    if (nick.length() > 9)
+    {
+        nick = nick.substr(0, 9);
+        nick.append(".");
+    }
+    return ;
+}
+
 void Phonebook::print_all_data(int index)
 {
     std::string fn, ln, nick;
@@ -126,7 +145,7 @@ void Phonebook::print_all_data(int index)
 
 void Phonebook::print_one_cont(int index)
 {
-    std::cout << "Information per user index" << index << "is printing.." << std::endl;
+    std::cout << "Information per user index " << index << " is printing..." << std::endl;
     std::cout << "First name:" << A[index].get_first_name() << std::endl;
     std::cout << "Last name:"<< A[index].get_last_name() << std::endl;
     std::cout << "Nickname:"<< A[index].get_nickname() << std::endl;
@@ -168,7 +187,6 @@ void Phonebook::PrintData(int i)
         std::cout << "To see detailed info pour contacts, enter index No: ";
         int x;
         std::cin >> x;
-        // std::cin.ignore(std::numeric_limits<int>::max(), '\n');
         if (x < i && x >= 0 && std::cin.good())
         {
             print_one_cont(x);
@@ -181,7 +199,7 @@ void Phonebook::PrintData(int i)
                     std::cin.clear();
                     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 }
-            std::cout << "This contact does not exist." << std::endl;
+            std::cout << "This contact does not exist. Return to main input." << std::endl;
             return;
         }
     }

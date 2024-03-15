@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 21:54:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/15 15:27:52 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:30:25 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,8 @@ class Phonebook
         void print_one_cont(int index);
         bool ft_check(void);
         void PrintData(int i);
+        void StringConverter(std::string &fn, std::string &ln, std::string &nick);
 };
-
-void StringConverter(std::string &fn, std::string &ln, std::string &nick);
 
 #endif
 
