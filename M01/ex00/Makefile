@@ -6,14 +6,14 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/15 00:28:36 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/15 18:31:14 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/16 18:34:24 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Account 
+NAME = Brainzzz 
 
-SRC = main.cpp Zombie.cpp
+SRC = main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
 
 HEADER = Zombie.hpp
 
