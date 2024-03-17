@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 00:28:46 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/17 19:33:55 by ufitzhug         ###   ########.fr       */
+/*   Created: 2024/03/17 18:29:53 by ufitzhug          #+#    #+#             */
+/*   Updated: 2024/03/17 19:51:10 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name1) : name(name1)
+int main (void)
 {
-    this->name = name1;
-    announce();
+    int i = 0;
+    std::string name;
+    std::cout << "Please enter names of Zombies in Horde" << std::endl;
+    std::cin >> name;
+    std::cout << "Please enter quantity of Zombies in Horde" << std::endl;
+    std::cin >> i;
+    Zombie* Horde; 
+    Horde = zombieHorde(i, name);
+    delete [] Horde;
+    return 0;
 }
-
-void Zombie::announce(void)
-{
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-    return ;
-}
-
-
-Zombie::~Zombie() { }

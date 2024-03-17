@@ -5,24 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 00:28:46 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/17 19:33:55 by ufitzhug         ###   ########.fr       */
+/*   Created: 2024/03/17 18:29:58 by ufitzhug          #+#    #+#             */
+/*   Updated: 2024/03/17 19:45:51 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name1) : name(name1)
+Zombie::~Zombie()
+{
+    std::cout << "Zombie " << name << " is dead..." << std::endl;
+}
+
+void Zombie::SetName(std::string name1)
 {
     this->name = name1;
-    announce();
+    return ;
 }
 
 void Zombie::announce(void)
 {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::string name2 = GetName();
+    std::cout << name2 << ": BraiiiiiiinnnzzzZ..." << std::endl;
     return ;
 }
 
-
-Zombie::~Zombie() { }
+const std::string& Zombie::GetName(void) const
+{
+    return (name);
+}
