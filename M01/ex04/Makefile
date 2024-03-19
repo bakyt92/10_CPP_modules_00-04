@@ -6,16 +6,16 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 15:39:36 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/19 15:40:57 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/19 21:28:03 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = Sed
 
-SRC = main.cpp Sed.cpp
+SRC = main.cpp Sed2.cpp
 
-HEADER = Sed.hpp
+HEADER = Sed2.hpp
 
 OBJ = $(SRC:%.c= %.o)
 

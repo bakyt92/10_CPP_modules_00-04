@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 15:39:43 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 16:41:40 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/19 20:34:18 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@
 class Sed2
 {
     private:
+        std::string address;
         std::string s1;
         std::string s2;
-        std::string address;
     public:
-        std::string CopyInput (char *input);
-        
+        Sed2(char* adr, char* str1, char* str2);
+        const std::string& getAddress() const;
+        const std::string& getS1() const;
+        const std::string& getS2() const;
+        void ft_replace(void);
+        ~Sed2();
 };
 
 
