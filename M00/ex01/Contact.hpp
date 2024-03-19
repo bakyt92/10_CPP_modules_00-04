@@ -27,7 +27,7 @@ class Contact
     public:
         Contact();
         ~Contact();
-        const std::string get_first_name(void);
+        const std::string get_first_name(void); // второй конст при вызове фунции все переменные не будут изменены;
         const std::string get_last_name(void);
         const std::string get_nickname(void);
         const std::string get_darkest_secret(void);
