@@ -29,5 +29,5 @@ class Zombie
 
 Zombie* newZombie (std::string name);
 void randomChump (std::string name);
-
+// v name stavit ssylky and const 
 #endif

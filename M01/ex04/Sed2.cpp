@@ -47,7 +47,7 @@ void Sed2::ft_replace(void)
             buffer.insert(i, getS2());
         }
         std::string res = address + ".replace";
-        std::ofstream ofs(res.c_str());
+        std::ofstream ofs(std::string(address + ".replace").c_str()); // check if it is working
         ofs << buffer;
         ofs.close();
     }

@@ -21,7 +21,7 @@ void print_data(std::string str, std::string *stringPTR, std::string &stringREF)
     return;
 }
 
-void print_address(std::string str, std::string *stringPTR, std::string &stringREF)
+void print_address(std::string& str, std::string *stringPTR, std::string &stringREF)
 {
     std::cout << &str << std::endl;
     std::cout << stringPTR << std::endl;
