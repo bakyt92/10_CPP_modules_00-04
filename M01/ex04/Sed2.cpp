@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Sed2.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/17 21:32:39 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 15:03:08 by ufitzhug         ###   ########.fr       */
+/*   Created: 2024/03/19 15:39:39 by ufitzhug          #+#    #+#             */
+/*   Updated: 2024/03/19 16:25:51 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Sed2.hpp"
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
-
-#include <string>
-#include <iostream>
-// #include "HumanA.hpp"
-// #include "HumanB.hpp"
-
-class Weapon
+std::string Sed2::CopyInput (char *input)
 {
-private:
-    std::string type;
-public:
-    Weapon(std::string input);
-    ~Weapon();
-    const std::string & getType(void) const;
-    void setType(std::string input);
-};
-
-#endif
+    std::string res;
+    int i = 0;
+    while (input[i])
+    {
+        res[i] = input[i];
+        i++;
+    }
+    res[i] = '\0';
+    return res;
+}

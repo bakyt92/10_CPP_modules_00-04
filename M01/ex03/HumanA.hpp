@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 21:32:18 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 14:34:41 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/19 15:29:57 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 class HumanA
 {
     private:
-        Weapon *Weapon42;
         std::string name;
+        Weapon &Weapon42;
     public:
     HumanA(std::string _name, Weapon& _Weapon42);
     ~HumanA();

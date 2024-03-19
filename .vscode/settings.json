@@ -69,6 +69,7 @@
         "numbers": "cpp",
         "ranges": "cpp",
         "span": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "fstream": "cpp"
     }
 }

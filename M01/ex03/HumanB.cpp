@@ -6,11 +6,14 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 21:32:21 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 14:30:05 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/19 15:47:00 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// *ADD check of input of Class WEAPON
+
 #include "Weapon.hpp"
+#include "HumanB.hpp"
 
 HumanB::HumanB(std::string _name) : name(_name)
 {

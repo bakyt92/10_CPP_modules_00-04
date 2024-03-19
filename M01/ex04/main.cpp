@@ -5,31 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/17 21:32:28 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 15:06:36 by ufitzhug         ###   ########.fr       */
+/*   Created: 2024/03/19 15:39:29 by ufitzhug          #+#    #+#             */
+/*   Updated: 2024/03/19 16:27:13 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Sed2.hpp"
 
-int main()
+int main (int argc, char **argv)
 {
+    if (argc != 4)
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanA bob("Bob", club);
-        bob.attack();
-        club.setType("some other type of club");
-        bob.attack();
+        std::cout << "ERROR. Wrong number of arguments." << std::endl;
+        return 1;
     }
+    Sed2 Sed;
+    std::string address;
+    address = Sed.CopyInput(argv[1]);
+    std::ifstream ifs;
+    ifs.open(address, std::ifstream::in);
+    std::string buffer;
+    while (ifs.good())
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanB jim("Jim");
-        jim.setWeapon(club);
-        jim.attack();
-        club.setType("some other type of club");
-        jim.attack();
+        ifs.getline(buffer, 1024);
+        
     }
+    
+    
+    stargv[2]
     return 0;
 }
