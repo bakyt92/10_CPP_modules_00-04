@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 15:39:39 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 21:37:55 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/19 21:46:21 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ const std::string& Sed2::getS2() const
 
 void Sed2::ft_replace(void)
 {
-    std::ifstream ifs(this->address);
+    std::ifstream ifs(this->address.c_str());
     std::string buffer;
     while (ifs.good() && ifs.is_open())
     {
@@ -46,7 +46,8 @@ void Sed2::ft_replace(void)
             buffer.erase(i, s1.size());
             buffer.insert(i, getS2());
         }
-        std::ofstream ofs(this->address + ".replace");
+        std::string res = address + ".replace";
+        std::ofstream ofs(res.c_str());
         ofs << buffer;
         ofs.close();
     }

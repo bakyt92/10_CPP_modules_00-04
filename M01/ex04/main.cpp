@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 15:39:29 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 20:37:14 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/19 21:47:17 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ int main (int argc, char **argv)
         return 1;
     }
     Sed2 Obj(argv[1], argv[2], argv[3]);
-    // ifs.open(Obj.getAddress(), std::ifstream::in);
-    
-    
+    Obj.ft_replace();
     return 0;
 }
