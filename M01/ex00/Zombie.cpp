@@ -14,8 +14,6 @@
 
 Zombie::Zombie(std::string name1) : name(name1)
 {
-    this->name = name1;
-    // string vyshe mozhno udalu=it
     announce();
 }
 
