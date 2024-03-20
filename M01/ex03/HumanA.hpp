@@ -19,7 +19,7 @@ class HumanA
     private:
         std::string name;
         Weapon &Weapon42;
-        HumanA(); // garantiruet chto iz main net vyzova
+        HumanA();
     public:
     HumanA(std::string _name, Weapon& _Weapon42);
     ~HumanA();

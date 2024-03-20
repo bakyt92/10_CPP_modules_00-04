@@ -20,6 +20,7 @@
 class Sed2
 {
     private:
+        Sed2();
         std::string address;
         std::string s1;
         std::string s2;
