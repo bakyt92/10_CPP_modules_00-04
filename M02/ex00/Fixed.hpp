@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:03:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/21 15:48:29 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/21 16:20:57 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
     static const int nfb;
 public:
     Fixed(/* args */);
-    Fixed (Fixed const & src);
+    Fixed (const Fixed & src);
     ~Fixed();
     Fixed& operator=(Fixed const & rhs);
     int getRawBits( void ) const;
