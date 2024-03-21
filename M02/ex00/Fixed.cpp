@@ -39,11 +39,12 @@ Fixed& Fixed::operator=(Fixed const & rhs)
 
 int Fixed::getRawBits (void) const
 {
-    
+    return (this->fxvalue);
 }
 
 void Fixed::setRawBits( int const raw )
 {
-    
+    fxvalue = raw;
+    return ;
 }
 
