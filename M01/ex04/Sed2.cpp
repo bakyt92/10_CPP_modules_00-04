@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 15:39:39 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/19 21:46:21 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:50:10 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ void Sed2::ft_replace(void)
 {
     std::ifstream ifs(this->address.c_str());
     std::string buffer;
+    if (!ifs.good())
+        {
+            std::cout << "File error. Wrong input." << std::endl;
+            return ;
+        }
     while (ifs.good() && ifs.is_open())
     {
         std::getline(ifs, buffer, '\0');
