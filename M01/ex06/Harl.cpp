@@ -52,6 +52,7 @@ void    Harl::complain(std::string level)
                 (this->*ptr1[2])();
             case 3: 
                 (this->*ptr1[3])();
+                break;
             default:
                 std::cout << "Probably complaining about insignificant problems" << std::endl;
         }
