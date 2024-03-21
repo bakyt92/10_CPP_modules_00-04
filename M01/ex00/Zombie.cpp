@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 00:28:46 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/17 19:33:55 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/21 18:28:50 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ void Zombie::announce(void)
 }
 
 
-Zombie::~Zombie() { }
+Zombie::~Zombie() 
+{ 
+}

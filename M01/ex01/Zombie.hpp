@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 18:30:02 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/17 19:46:08 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/21 18:42:20 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <string>
 #include <iostream>
+#include <limits>
 
 class Zombie
 {
