@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:45:59 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/22 15:59:24 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:39:22 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ Fixed::Fixed()
 {
     std::cout << "Default constructor called." << std::endl;
     fxvalue = 0;
+}
+
+Fixed::Fixed(const int a) : fxvalue(a)
+{
+    std::cout << "Int constructor called." << std::endl;
 }
 
 Fixed::Fixed (const Fixed &src)
