@@ -6,10 +6,9 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:45:59 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/22 15:56:21 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/22 15:59:24 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Fixed.hpp"
 
@@ -50,4 +49,3 @@ void Fixed::setRawBits( int const raw )
     fxvalue = raw;
     return ;
 }
-

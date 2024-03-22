@@ -6,11 +6,11 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/22 14:45:45 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/22 15:58:58 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/22 17:03:00 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = MyFirstClass 
+NAME = MoreUsefulNumberClass 
 
 SRC = main.cpp Fixed.cpp
 

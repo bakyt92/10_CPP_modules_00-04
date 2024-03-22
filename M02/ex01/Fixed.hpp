@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:45:55 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/22 15:56:50 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:32:35 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,15 @@ private:
     static const int nfb;
 public:
     Fixed();
+    Fixed(const int a); // constructor with const integer as parameter.
+    Fixed(const float a); // constructor with const float as parameter.
     Fixed (const Fixed & src);
     ~Fixed();
     Fixed& operator=(Fixed const & rhs);
     int getRawBits( void ) const;
     void setRawBits( int const raw );
+    float toFloat (void) const;
+    int toInt(void) const;
 };
 
 
