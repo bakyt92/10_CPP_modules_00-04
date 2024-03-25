@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:45:55 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 18:27:54 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/25 18:31:37 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ public:
     Fixed (const Fixed & src);
     ~Fixed();
     Fixed& operator=(Fixed const & rhs);
-    
     int getRawBits( void ) const;
     void setRawBits( int const raw );
     float toFloat (void) const;
