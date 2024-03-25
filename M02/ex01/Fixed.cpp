@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:45:59 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 18:41:00 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/25 18:42:02 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,3 +73,5 @@ std::ostream& operator<< (std::ostream &out, const Fixed &a)
     out << a.toFloat();
     return out;
 }
+
+// https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
