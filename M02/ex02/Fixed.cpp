@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 19:44:02 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/25 20:30:33 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ std::ostream& operator<< (std::ostream &out, const Fixed &a)
     return out;
 }
 
+// COMPARISON 6 operators //
+
 bool Fixed::operator== (const Fixed &rhs)
 {
     return (this->getRawBits() == rhs.getRawBits());
@@ -105,17 +107,27 @@ bool Fixed::operator<= (const Fixed &rhs)
     return (this->getRawBits() <= rhs.getRawBits());
 }
 
+// Arithmetic 4 operators //
+
 Fixed Fixed::operator+ (const Fixed &rhs)
 {
-    this->setRawBits(fxvalue + rhs.getRawBits());
-    return (*this);
+    return Fixed(this->toFloat() + rhs.toFloat());
 }
 
 Fixed Fixed::operator- (const Fixed &rhs)
 {
-    this->setRawBits(fxvalue - rhs.getRawBits());
-    return (*this);
+    return Fixed(this->toFloat() - rhs.toFloat());
 }
 
+Fixed Fixed::operator* (const Fixed &rhs)
+{
+    return Fixed(this->toFloat() * rhs.toFloat());
+}
+
+
+Fixed Fixed::operator/ (const Fixed &rhs)
+{
+    return Fixed(this->toFloat() / rhs.toFloat());
+}
 
 // https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
