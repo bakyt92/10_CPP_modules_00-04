@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:52 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 19:44:29 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/25 20:55:45 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,23 @@ public:
     void setRawBits( int const raw );
     float toFloat (void) const;
     int toInt(void) const;
+    // comparison operators
     bool operator== (const Fixed &rhs);
     bool operator!= (const Fixed &rhs);
     bool operator< (const Fixed &rhs);
     bool operator<= (const Fixed &rhs);
     bool operator> (const Fixed &rhs);
     bool operator>= (const Fixed &rhs);
-    
+    // math operators
     Fixed operator+ (const Fixed &rhs);
     Fixed operator- (const Fixed &rhs);
     Fixed operator* (const Fixed &rhs);
     Fixed operator/ (const Fixed &rhs);
+    // increment / decrement operators
+    Fixed & operator++(void);
+    Fixed & operator++(int x);
+    Fixed & operator--(void);
+    Fixed & operator--(int x);
 };
 
 std::ostream& operator<< (std::ostream &out, const Fixed &a);

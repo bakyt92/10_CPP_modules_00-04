@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 20:30:33 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/25 20:54:46 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,10 +124,39 @@ Fixed Fixed::operator* (const Fixed &rhs)
     return Fixed(this->toFloat() * rhs.toFloat());
 }
 
-
 Fixed Fixed::operator/ (const Fixed &rhs)
 {
     return Fixed(this->toFloat() / rhs.toFloat());
+}
+
+// pre-fix increment - return reference to object
+Fixed & Fixed::operator++(void)
+{
+    this->fxvalue++;
+    return (*this);
+}
+
+// post-fix increment, we send int to this function. It is necessary to 
+Fixed & Fixed::operator++(int x)
+{
+    Fixed temp(*this);
+    this->fxvalue++;
+    return temp;
+}
+
+// pre-fix decrement - return reference to object
+Fixed & Fixed::operator--(void)
+{
+    this->fxvalue--;
+    return (*this);
+}
+
+// post-fix increment, we send int to this function. It is necessary to 
+Fixed & Fixed::operator--(int x)
+{
+    Fixed temp(*this);
+    this->fxvalue--;
+    return temp;
 }
 
 // https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
