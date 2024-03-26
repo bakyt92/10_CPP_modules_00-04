@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/26 16:27:57 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:45:21 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,11 +137,11 @@ Fixed & Fixed::operator++(void)
 }
 
 // post-fix increment, we send int to this function. It is necessary to 
-Fixed & Fixed::operator++(int x)
+Fixed & Fixed::operator++(int)
 {
-    Fixed temp(*this);
+    Fixed &temp = *this;
     this->fxvalue++;
-    return temp;
+    return (temp);
 }
 
 // pre-fix decrement - return reference to object
@@ -152,9 +152,9 @@ Fixed & Fixed::operator--(void)
 }
 
 // post-fix increment, we send int to this function. It is necessary to 
-Fixed & Fixed::operator--(int x)
+Fixed & Fixed::operator--(int)
 {
-    Fixed temp(*this);
+    Fixed &temp = *this;
     this->fxvalue--;
     return temp;
 }
