@@ -18,12 +18,12 @@ Fixed::Fixed()
     fxvalue = 0;
 }
 
-Fixed::Fixed(const int a) : fxvalue(a * (1 << nfb))
+Fixed::Fixed(const int a) : fxvalue(a << nfb)
 {
     std::cout << "Int constructor called." << std::endl;
 }
 
-Fixed::Fixed(const float a) : fxvalue(roundf(a * (1 << nfb)))
+Fixed::Fixed(const float a) : fxvalue(roundf(a *( 1 << nfb)))
 {
     std::cout << "Float constructor called." << std::endl;
 }
