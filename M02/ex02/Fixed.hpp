@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:52 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/26 16:34:10 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/26 20:19:30 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ public:
     Fixed operator/ (const Fixed &rhs);
     // increment / decrement operators
     Fixed & operator++(void);
-    Fixed & operator++(int);
+    Fixed operator++(int);
     Fixed & operator--(void);
-    Fixed & operator--(int);
+    Fixed operator--(int);
     // add functions min and max
     static Fixed & min (Fixed &a, Fixed &b);
     static const Fixed & min (Fixed const &a, Fixed const &b);
