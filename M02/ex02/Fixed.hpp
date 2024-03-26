@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:52 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/26 20:19:30 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/26 20:29:42 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,5 @@ public:
 };
 
 std::ostream& operator<< (std::ostream &out, const Fixed &a);
-
-
 
 #endif
