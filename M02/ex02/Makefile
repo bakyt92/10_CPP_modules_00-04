@@ -6,12 +6,12 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/22 17:58:59 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/25 18:57:37 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/26 16:00:51 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = MoreUsefulNumberClass 
+NAME = NowWeAreTalking 
 
 SRC = main.cpp Fixed.cpp
 

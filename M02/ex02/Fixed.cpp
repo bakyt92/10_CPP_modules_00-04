@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 20:54:46 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:27:57 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,4 +159,27 @@ Fixed & Fixed::operator--(int x)
     return temp;
 }
 
+// add functions min and max
+Fixed &  Fixed::min (Fixed &a, Fixed &b)
+{
+    return (a.getRawBits() <= b.getRawBits() ? a : b);
+}
+
+const Fixed & Fixed::min (Fixed const &a, Fixed const &b)
+{
+    return (a.getRawBits() <= b.getRawBits() ? a : b);
+}
+
+Fixed & Fixed::max (Fixed &a, Fixed &b)
+{
+    return (a.getRawBits() >= b.getRawBits() ? a : b);
+}
+
+const Fixed & Fixed::max (Fixed const &a, Fixed const &b)
+{
+    return (a.getRawBits() >= b.getRawBits() ? a : b);
+}
+
+// Note that because all the data and functions in this class are static, we don’t need to instantiate an object of the class to make use of its functionality! 
+// This class utilizes a static member variable to hold the value of the next ID to be assigned, and provides a static member function to return that ID and increment it.
 // https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/

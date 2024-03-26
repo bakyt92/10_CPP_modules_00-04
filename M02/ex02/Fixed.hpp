@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:52 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 20:55:45 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:10:34 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,15 @@ public:
     Fixed & operator++(int x);
     Fixed & operator--(void);
     Fixed & operator--(int x);
+    // add functions min and max
+    static Fixed & min (Fixed &a, Fixed &b);
+    static const Fixed & min (Fixed const &a, Fixed const &b);
+    static Fixed & max (Fixed &a, Fixed &b);
+    static const Fixed & max (Fixed const &a, Fixed const &b);
 };
 
 std::ostream& operator<< (std::ostream &out, const Fixed &a);
+
+
 
 #endif
