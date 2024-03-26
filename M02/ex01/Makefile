@@ -6,7 +6,7 @@
 #    By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/22 14:45:45 by ufitzhug          #+#    #+#              #
-#    Updated: 2024/03/22 17:03:00 by ufitzhug         ###   ########.fr        #
+#    Updated: 2024/03/26 20:33:50 by ufitzhug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,4 +38,4 @@ fclean	:	clean
 
 re	:	fclean all
 
-.PHONY : all clean fclean re 
+.PHONY : all clean fclean re

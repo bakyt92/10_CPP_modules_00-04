@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:03:35 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/22 14:06:54 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/26 20:38:20 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 {
 private:
     int fxvalue;
-    static const int nfb;
+    static const int nfb = 8;
 public:
     Fixed();
     Fixed (const Fixed & src);
