@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:38 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/26 20:37:35 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/27 11:44:34 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,32 +77,32 @@ std::ostream& operator<< (std::ostream &out, const Fixed &a)
 
 // COMPARISON 6 operators //
 
-bool Fixed::operator== (const Fixed &rhs)
+bool Fixed::operator== (const Fixed &rhs) const
 {
     return (this->getRawBits() == rhs.getRawBits());
 }
 
-bool Fixed::operator!= (const Fixed &rhs)
+bool Fixed::operator!= (const Fixed &rhs) const
 {
     return (this->getRawBits() != rhs.getRawBits());
 }
 
-bool Fixed::operator> (const Fixed &rhs)
+bool Fixed::operator> (const Fixed &rhs) const
 {
     return (this->getRawBits() > rhs.getRawBits());
-}M02/ex00
+}
 
-bool Fixed::operator>= (const Fixed &rhs)
+bool Fixed::operator>= (const Fixed &rhs) const
 {
     return (this->getRawBits() >= rhs.getRawBits());
 }
 
-bool Fixed::operator< (const Fixed &rhs)
+bool Fixed::operator< (const Fixed &rhs) const
 {
     return (this->getRawBits() < rhs.getRawBits());
 }
 
-bool Fixed::operator<= (const Fixed &rhs)
+bool Fixed::operator<= (const Fixed &rhs) const
 {
     return (this->getRawBits() <= rhs.getRawBits());
 }

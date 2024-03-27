@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:00:29 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/26 21:11:50 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/27 11:42:27 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ class ClapTrap
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-}
+};
 
 #endif

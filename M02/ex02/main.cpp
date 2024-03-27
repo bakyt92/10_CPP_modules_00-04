@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:58:56 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/25 18:58:33 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/27 11:43:11 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ int main( void )
     std::cout << b << std::endl;
     std::cout << Fixed::max( a, b ) << std::endl;
     return 0;
-
 }
