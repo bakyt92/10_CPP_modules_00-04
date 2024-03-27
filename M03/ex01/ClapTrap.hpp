@@ -6,7 +6,7 @@
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 21:00:29 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/27 19:56:31 by ufitzhug         ###   ########.fr       */
+/*   Updated: 2024/03/27 19:56:47 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class ClapTrap
         int AttackDmg;
     public:
         ClapTrap(std::string _name);
-        //https://en.cppreference.com/w/cpp/language/data_memberslapTrap(std::string _name);
         ~ClapTrap();
         ClapTrap(const ClapTrap & src);
         ClapTrap & operator=(const ClapTrap & rhs);
