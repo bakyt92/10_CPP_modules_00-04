@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ufitzhug <ufitzhug@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 21:01:12 by ufitzhug          #+#    #+#             */
-/*   Updated: 2024/03/27 18:55:44 by ufitzhug         ###   ########.fr       */
+/*   Created: 2024/03/26 21:00:32 by ufitzhug          #+#    #+#             */
+/*   Updated: 2024/03/27 18:18:56 by ufitzhug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
-
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int main()
 {
-private:
-    
-public:
-    ScavTrap(std::string _name);
-    ~ScavTrap();
-};
-
-
-
-
-#endif
+    ClapTrap A("Berlin");
+    ClapTrap B(A);
+    A.attack("Momo");
+    A.takeDamage(5);
+    A.beRepaired(3);
+    return 0;
+}
