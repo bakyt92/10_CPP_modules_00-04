@@ -27,6 +27,19 @@ ScavTrap::ScavTrap(const ScavTrap & src)
     *this = src;
 }
 
+ScavTrap& ScavTrap::operator= (const ScavTrap & rhs)
+{
+    std::cout << "Copy assignment operator called." << std::endl;
+    if (this != & rhs)
+    {
+        this->name = rhs.name;
+        this->EnergyPoints = rhs.EnergyPoints;
+        this->HitPoints = rhs.EnergyPoints;
+        this->AttackDmg = rhs.AttackDmg;
+    }
+    return *this;
+}
+
 ScavTrap::~ScavTrap()
 {
 
