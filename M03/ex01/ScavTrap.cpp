@@ -12,7 +12,7 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name), HitPoints(100), 
+ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name)
 // !!!!УТОЧНИТЬ ПОЧЕМУ ХИТПОИНТС НЕ РАБОТАЮТ ТАКИМ СПОБОСОМ
 {
     this->HitPoints = 100;
@@ -45,6 +45,11 @@ ScavTrap::~ScavTrap()
 
 }
 
+void ScavTrap::guardGate()
+{
+    std::cout << "ScavTrap is in Gate keeper mode." << std::endl; 
+    return ;
+}
 
 //https://stackoverflow.com/questions/18479295/member-initializer-does-not-name-a-non-static-data-member-or-base-class
 // https://en.cppreference.com/w/cpp/language/data_members 

@@ -11,11 +11,11 @@
 # **************************************************************************** #
 
 
-NAME = ClapTrap 
+NAME = ScavTrap
 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 
-HEADER = ClapTrap.hpp
+HEADER = ClapTrap.hpp ScavTrap.hpp
 
 OBJ = $(SRC:%.c= %.o)
 

@@ -18,12 +18,13 @@
 class ScavTrap : public ClapTrap
 {
 private:
-    
+    ScavTrap();
 public:
     ScavTrap(std::string _name);
     ~ScavTrap();
     ScavTrap(const ScavTrap & src);
     ScavTrap& operator= (const ScavTrap & rhs);
+    void guardGate();
 };
 
 #endif
